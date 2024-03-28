@@ -22,10 +22,22 @@ namespace contaBancaria
         {
             depositar(depositoInicial);
         }
-        public void Depositar(double Valor)
+        public int NumeroConta
         {
-            _Saldo += Valor;
+            get{ return _NumeroConta; }
+        private set { _NumeroConta = value; }    
         }
+
+        public string NomeTitular
+        {
+            get { return _NomeTitular;}
+            set { _NomeTitular = value; }
+        }
+        public void depositar(double valor)
+        {
+            _Saldo += valor;
+        }
+
         public void Sacar(double Valor)
         {
             _Saldo -= Valor + 5.0;

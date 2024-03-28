@@ -13,8 +13,8 @@ namespace contaBancaria
         private double _Saldo;
         public contaBancaria(int NumeroConta, string NomeTitular)
         {
-            _NumeroConta = _NumeroConta;
-            _NomeTitular = _NomeTitular;
+            _NumeroConta = NumeroConta;
+            _NomeTitular = NomeTitular;
              _Saldo = 0.0;
         }
         public contaBancaria(int NumeroConta, string NomeTitular, double depositoInicial):
@@ -26,7 +26,7 @@ namespace contaBancaria
         {
             _Saldo += Valor;
         }
-        public void sacar(double Valor)
+        public void Sacar(double Valor)
         {
             _Saldo -= Valor + 5.0;
 }
